@@ -1,6 +1,6 @@
 from php.driver_generator import DriverGenerator
 
-gen = DriverGenerator("python_driver", "C:/xampp/htdocs/php_api")
+gen = DriverGenerator("python_driver", "/opt/lampp/htdocs/api_test")
 
 gen.set_includes(["lib.php"])
 gen.set_functions(["return_str", "add"])

@@ -28,12 +28,14 @@ class DriverGenerator:
                           "http_response_code(500);\n}"   # TODO maybe from file
 
     def set_includes(self, includes):
-        # TODO check if includes is list
+        if not isinstance(includes, list):
+            includes = [includes]
         for inc in includes:
             self.includes.append("include('{}');\n".format(inc))
 
     def set_functions(self, funcs):
-        # TODO check if funcs is list
+        if not isinstance(funcs, list):
+            funcs = [funcs]
         for func in funcs:
             self.functions.append("'{}' => {},\n".format(func, func))
 
